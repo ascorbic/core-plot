@@ -1,0 +1,22 @@
+digraph structs
+{
+  bgcolor="transparent";
+  edge [fontname="Lucinda Grande",fontsize="10",labelfontname="Lucinda Grande",labelfontsize="10"];
+  node [fontname="Lucinda Grande",fontsize="10",shape=record];
+  rankdir=LR;
+  Node4 [label="All Plots",height=0.2,width=0.4,color="black",URL="$group__plot_animation_all_plots.html"];
+  Node1 [label="Animatable Properties",height=0.2,width=0.4,color="black",URL="$group__animation.html",tooltip="Custom layer properties that can be animated using Core Animation."];
+  Node3 [label="Pie Chart",height=0.2,width=0.4,color="black",URL="$group__plot_animation_pie_chart.html"];
+  Node2 [label="Bar Plot",height=0.2,width=0.4,color="black",URL="$group__plot_animation_bar_plot.html"];
+  Node6 [label="Scatter Plot",height=0.2,width=0.4,color="black",URL="$group__plot_animation_scatter_plot.html"];
+  Node7 [label="Trading Range Plot",height=0.2,width=0.4,color="black",URL="$group__plot_animation_trading_range_plot.html"];
+  Node5 [label="Range Plot",height=0.2,width=0.4,color="black",URL="$group__plot_animation_range_plot.html"];
+  Node0 [label="Plots",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1->Node0 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, color="midnightblue", dir="back", style="solid"];
+}

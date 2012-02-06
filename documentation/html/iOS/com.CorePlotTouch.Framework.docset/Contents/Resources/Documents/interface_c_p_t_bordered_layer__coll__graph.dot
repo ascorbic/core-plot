@@ -1,0 +1,22 @@
+digraph G
+{
+  bgcolor="transparent";
+  edge [fontname="Lucinda Grande",fontsize="10",labelfontname="Lucinda Grande",labelfontsize="10"];
+  node [fontname="Lucinda Grande",fontsize="10",shape=record];
+  Node1 [label="CPTBorderedLayer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node2 [label="CPTAnnotationHostLayer",height=0.2,width=0.4,color="black",URL="$interface_c_p_t_annotation_host_layer.html",tooltip="A container layer for annotations."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node3 [label="CPTLayer",height=0.2,width=0.4,color="black",URL="$interface_c_p_t_layer.html",tooltip="Base class for all Core Animation layers in Core Plot."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node4 [label="CALayer",height=0.2,width=0.4,color="black",URL="doxygen-cocoa-touch-tags.xml$http://developer.apple.com/iphone/library/documentation/GraphicsImaging/Reference/CALayer_class/Introduction/Introduction.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node5 [label="NSObject",height=0.2,width=0.4,color="black",URL="doxygen-cocoa-touch-tags.xml$http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node6 [label="\<NSObject-p\>",height=0.2,width=0.4,color="black",URL="doxygen-cocoa-touch-tags.xml$http://developer.apple.com/iPhone/library/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node7 [label="\<CAMediaTiming-p\>",height=0.2,width=0.4,color="black",URL="doxygen-cocoa-touch-tags.xml$http://www.devworld.apple.com/iphone/library/documentation/GraphicsImaging/Reference/CAMediaTiming_protocol/Introduction/Introduction.html"];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+  Node8 [label="\<CPTResponder\>",height=0.2,width=0.4,color="black",URL="$protocol_c_p_t_responder-p.html",tooltip="The basis of all event processing in Core Plot."];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Lucinda Grande"];
+}

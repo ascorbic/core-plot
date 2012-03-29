@@ -60,6 +60,17 @@ CPTBarPlotField;
 
 ///	@}
 
+/// @name Legends
+/// @{
+
+/** @brief (Optional) Gets the legend title for the given bar plot bar.
+ *	@param barPlot The bar plot.
+ *	@param index The data index of interest.
+ *	@return The title text for the legend entry for the point with the given index.
+ **/
+-(NSString *)legendTitleForBarPlot:(CPTBarPlot *)barPlot recordIndex:(NSUInteger)index;
+
+///	@}
 @end
 
 #pragma mark -
@@ -67,16 +78,20 @@ CPTBarPlotField;
 /**
  *	@brief Bar plot delegate.
  **/
-@protocol CPTBarPlotDelegate<NSObject>
+@protocol CPTBarPlotDelegate<CPTPlotDelegate>
 
 @optional
 
 ///	@name Point Selection
 /// @{
 
-/**	@brief (Optional) Informs delegate that a point was touched.
- *	@param plot The scatter plot.
- *	@param index Index of touched point
+/**	@brief (Optional) Informs the delegate that a bar was
+ *	@if MacOnly clicked. @endif
+ *	@if iOSOnly touched. @endif
+ *	@param plot The bar plot.
+ *	@param index The index of the
+ *	@if MacOnly clicked bar. @endif
+ *	@if iOSOnly touched bar. @endif
  **/
 -(void)barPlot:(CPTBarPlot *)plot barWasSelectedAtRecordIndex:(NSUInteger)index;
 

@@ -385,11 +385,6 @@ static NSString *const barPlot2		  = @"Bar Plot 2";
 	return num;
 }
 
--(CPTFill *)barFillForBarPlot:(CPTBarPlot *)barPlot recordIndex:(NSUInteger)index
-{
-	return nil;
-}
-
 -(CPTLayer *)dataLabelForPlot:(CPTPlot *)plot recordIndex:(NSUInteger)index
 {
 	if ( [(NSString *)plot.identifier isEqualToString:barPlot2] ) {
@@ -463,7 +458,7 @@ static NSString *const barPlot2		  = @"Bar Plot 2";
 
 -(void)barPlot:(CPTBarPlot *)plot barWasSelectedAtRecordIndex:(NSUInteger)index
 {
-	NSLog(@"barWasSelectedAtRecordIndex %lu", index);
+	NSLog(@"barWasSelectedAtRecordIndex %u", (unsigned)index);
 
 	if ( symbolTextAnnotation ) {
 		[graph.plotAreaFrame.plotArea removeAnnotation:symbolTextAnnotation];
@@ -532,6 +527,32 @@ static NSString *const barPlot2		  = @"Bar Plot 2";
 		NSData *pngData			  = [tiffRep representationUsingType:NSPNGFileType properties:nil];
 		[pngData writeToFile:[pngSavingDialog filename] atomically:NO];
 	}
+}
+
+#pragma mark -
+#pragma mark Printing
+
+-(IBAction)printDocument:(id)sender
+{
+	NSPrintInfo *printInfo = [NSPrintInfo sharedPrintInfo];
+
+	NSRect printRect = NSZeroRect;
+
+	printRect.size.width  = (printInfo.paperSize.width - printInfo.leftMargin - printInfo.rightMargin) * printInfo.scalingFactor;
+	printRect.size.height = (printInfo.paperSize.height - printInfo.topMargin - printInfo.bottomMargin) * printInfo.scalingFactor;
+
+	hostView.printRect = printRect;
+
+	NSPrintOperation *printOperation = [NSPrintOperation printOperationWithView:hostView printInfo:printInfo];
+	[printOperation runOperationModalForWindow:hostView.window
+									  delegate:self
+								didRunSelector:@selector(printOperationDidRun:success:contextInfo:)
+								   contextInfo:NULL];
+}
+
+-(void)printOperationDidRun:(NSPrintOperation *)printOperation success:(BOOL)success contextInfo:(void *)contextInfo
+{
+	// print delegate
 }
 
 #pragma mark -

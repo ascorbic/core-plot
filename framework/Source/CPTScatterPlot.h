@@ -31,9 +31,10 @@ CPTScatterPlotField;
  *	@brief Enumeration of scatter plot interpolation algorithms
  **/
 typedef enum _CPTScatterPlotInterpolation {
-	CPTScatterPlotInterpolationLinear,   ///< Linear interpolation.
-	CPTScatterPlotInterpolationStepped,  ///< Steps beginnning at data point.
-	CPTScatterPlotInterpolationHistogram ///< Steps centered at data point.
+	CPTScatterPlotInterpolationLinear,    ///< Linear interpolation.
+	CPTScatterPlotInterpolationStepped,   ///< Steps beginnning at data point.
+	CPTScatterPlotInterpolationHistogram, ///< Steps centered at data point.
+	CPTScatterPlotInterpolationCurved     ///< Bezier curve interpolation.
 }
 CPTScatterPlotInterpolation;
 
@@ -75,16 +76,20 @@ CPTScatterPlotInterpolation;
 /**
  *	@brief Scatter plot delegate.
  **/
-@protocol CPTScatterPlotDelegate<NSObject>
+@protocol CPTScatterPlotDelegate<CPTPlotDelegate>
 
 @optional
 
 ///	@name Point Selection
 /// @{
 
-/**	@brief (Optional) Informs delegate that a point was touched.
+/**	@brief (Optional) Informs the delegate that a data point was
+ *	@if MacOnly clicked. @endif
+ *	@if iOSOnly touched. @endif
  *	@param plot The scatter plot.
- *	@param index Index of touched point
+ *	@param index The index of the
+ *	@if MacOnly clicked data point. @endif
+ *	@if iOSOnly touched data point. @endif
  **/
 -(void)scatterPlot:(CPTScatterPlot *)plot plotSymbolWasSelectedAtRecordIndex:(NSUInteger)index;
 

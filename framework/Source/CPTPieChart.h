@@ -75,8 +75,6 @@ CPTPieDirection;
  *	@param pieChart The pie chart.
  *	@param index The data index of interest.
  *	@return The title text for the legend entry for the point with the given index.
- *  If this method is not implemented or returns nil, the legend will get
- *	the title from the corresponding data label if it is a CPTTextLayer.
  **/
 -(NSString *)legendTitleForPieChart:(CPTPieChart *)pieChart recordIndex:(NSUInteger)index;
 
@@ -88,16 +86,20 @@ CPTPieDirection;
 /**
  *	@brief Pie chart delegate.
  **/
-@protocol CPTPieChartDelegate<NSObject>
+@protocol CPTPieChartDelegate<CPTPlotDelegate>
 
 @optional
 
-///	@name Point Selection
+///	@name Slice Selection
 /// @{
 
-/**	@brief (Optional) Informs the delegate that a pie slice was touched or clicked.
+/**	@brief (Optional) Informs the delegate that a pie slice was
+ *	@if MacOnly clicked. @endif
+ *	@if iOSOnly touched. @endif
  *	@param plot The pie chart.
- *	@param index The index of the slice that was touched or clicked.
+ *	@param index The index of the
+ *	@if MacOnly clicked pie slice. @endif
+ *	@if iOSOnly touched pie slice. @endif
  **/
 -(void)pieChart:(CPTPieChart *)plot sliceWasSelectedAtRecordIndex:(NSUInteger)index;
 

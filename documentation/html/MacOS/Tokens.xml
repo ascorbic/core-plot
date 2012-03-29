@@ -1722,6 +1722,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>CPTScatterPlotInterpolationCurved</Name>
+      <APILanguage>c</APILanguage>
+      <Type>econst</Type>
+    </TokenIdentifier>
+    <Path>_c_p_t_scatter_plot_8h.html</Path>
+    <Anchor>a0a9d8cdea584afe83809167eedeca8daaaa0ba9a6e0e682794e28c6640bdee064</Anchor>
+    <Abstract>Bezier curve interpolation.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>CPTScatterPlotBindingXValues</Name>
       <APILanguage>c</APILanguage>
       <Type>data</Type>
@@ -5073,6 +5083,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>legendTitleForBarPlot:recordIndex:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>intfm</Type>
+      <Scope>CPTBarPlotDataSource-p</Scope>
+    </TokenIdentifier>
+    <Path>protocol_c_p_t_bar_plot_data_source-p.html</Path>
+    <Anchor>a0260f990d08ebb0addd11b376bc814ed</Anchor>
+    <Abstract>(Optional) Gets the legend title for the given bar plot bar.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>CPTBarPlotDelegate</Name>
       <APILanguage>c</APILanguage>
       <Type>intf</Type>
@@ -5091,7 +5112,7 @@
     </TokenIdentifier>
     <Path>protocol_c_p_t_bar_plot_delegate-p.html</Path>
     <Anchor>a045bf92ef3b534c9b367aadbb155d086</Anchor>
-    <Abstract>(Optional) Informs delegate that a point was touched.</Abstract>
+    <Abstract>(Optional) Informs the delegate that a bar was clicked.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -5147,6 +5168,83 @@
     <Path>interface_c_p_t_bordered_layer.html</Path>
     <Anchor>aac2a435eb92b05e5400fa6220f5829c4</Anchor>
     <Abstract>The fill for the layer background.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>CPTCalendarFormatter</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Abstract>A number formatter that converts calendar intervals to dates. Useful for formatting labels on an axis...</Abstract>
+    <DeclaredIn>CPTCalendarFormatter.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>initWithDateFormatter:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Anchor>ab6ad8cd0f0bf399e05d7b779a3b1638a</Anchor>
+    <Abstract>Initializes new instance with the date formatter passed.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>stringForObjectValue:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Anchor>aa2e143d41e0c51cda348abf2f7a53638</Anchor>
+    <Abstract>Converts decimal number for the time into a date string. Uses the date formatter to do the conversion...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>dateFormatter</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Anchor>a53fa78450fc2ed376d20f01a45a9d08a</Anchor>
+    <Abstract>The date formatter used to generate strings from date calculations.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>referenceDate</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Anchor>ae1da329e1385b4c425f8b52d1073a1ae</Anchor>
+    <Abstract>Date from which time intervals are computed. If nil, the standard reference date (1 January 2001...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>referenceCalendar</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Anchor>ac9668df950a2374ad5f812d6b2dd6118</Anchor>
+    <Abstract>Calendar which is used for date calculations. If nil, the current calendar is used.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>referenceCalendarUnit</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>CPTCalendarFormatter</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_calendar_formatter.html</Path>
+    <Anchor>a2403c2187637254c9f39aadd732c3b0a</Anchor>
+    <Abstract>Calendar unit which is incremented in the date calculation. If 0, the date is incremented.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -6477,6 +6575,17 @@
     <Path>interface_c_p_t_graph_hosting_view.html</Path>
     <Anchor>a009ea355bc684c3872c98e460b89f644</Anchor>
     <Abstract>The CPTGraph hosted inside this view.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>printRect</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instp</Type>
+      <Scope>CPTGraphHostingView</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_graph_hosting_view.html</Path>
+    <Anchor>aa5f853281eb400f940a0440f7ec171d9</Anchor>
+    <Abstract>The bounding rectangle used when printing this view.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8841,7 +8950,7 @@
     </TokenIdentifier>
     <Path>protocol_c_p_t_pie_chart_delegate-p.html</Path>
     <Anchor>af6c6cf7f61a0cd35fd05928e45a8e2ca</Anchor>
-    <Abstract>(Optional) Informs the delegate that a pie slice was touched or clicked.</Abstract>
+    <Abstract>(Optional) Informs the delegate that a pie slice was clicked.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -8930,6 +9039,17 @@
     <Path>interface_c_p_t_plot.html</Path>
     <Anchor>a44f525ed96c9819b64fedc766feec98c</Anchor>
     <Abstract>Initializes a newly allocated CPTPlot object with the provided frame rectangle.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>pointingDeviceDownEvent:atPoint:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>CPTPlot</Scope>
+    </TokenIdentifier>
+    <Path>interface_c_p_t_plot.html</Path>
+    <Anchor>a0a667416c027447846109f1180aa30a1</Anchor>
+    <Abstract>Informs the receiver that the user has pressed the mouse button.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9116,7 +9236,7 @@
     </TokenIdentifier>
     <Path>interface_c_p_t_plot.html</Path>
     <Anchor>a8ea1af2352130e3f994fb57340222331</Anchor>
-    <Abstract>If YES, the cache holds data of type &amp;#39;double&amp;#39;, otherwise it holds NSNumber.</Abstract>
+    <Abstract>If YES, the cache holds data of type &amp;#39;double&amp;#39;, otherwise it holds NSDecimal.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -9645,6 +9765,28 @@
     <Path>protocol_c_p_t_plot_data_source-p.html</Path>
     <Anchor>ac1bda304421f3bff21f4db54282620d9</Anchor>
     <Abstract>(Optional) Gets a data label for the given plot.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>CPTPlotDelegate</Name>
+      <APILanguage>c</APILanguage>
+      <Type>intf</Type>
+      <Scope>CPTPlotDelegate</Scope>
+    </TokenIdentifier>
+    <Path>protocol_c_p_t_plot_delegate-p.html</Path>
+    <Abstract>Plot delegate.</Abstract>
+    <DeclaredIn>CPTPlot.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>plot:dataLabelWasSelectedAtRecordIndex:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>intfm</Type>
+      <Scope>CPTPlotDelegate-p</Scope>
+    </TokenIdentifier>
+    <Path>protocol_c_p_t_plot_delegate-p.html</Path>
+    <Anchor>ad6ca9ed72b54b2715f01c95d086eb78b</Anchor>
+    <Abstract>(Optional) Informs the delegate that a data label was clicked.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -10909,7 +11051,7 @@
     </TokenIdentifier>
     <Path>protocol_c_p_t_scatter_plot_delegate-p.html</Path>
     <Anchor>adb2b5b0dc2c027e3056d645ddff2420e</Anchor>
-    <Abstract>(Optional) Informs delegate that a point was touched.</Abstract>
+    <Abstract>(Optional) Informs the delegate that a data point was clicked.</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>

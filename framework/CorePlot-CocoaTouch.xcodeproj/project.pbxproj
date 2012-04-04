@@ -731,8 +731,6 @@
 		};
 /* End PBXGroup section */
 
-<<<<<<< HEAD
-=======
 /* Begin PBXHeadersBuildPhase section */
 		BC9B83430FB8A0A40035D8DA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
@@ -824,7 +822,6 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
->>>>>>> 3da0710fc024ceb00f4ca25dec49938ca0ba9c02
 /* Begin PBXNativeTarget section */
 		BC9B83460FB8A0A40035D8DA /* CorePlot-CocoaTouch */ = {
 			isa = PBXNativeTarget;
